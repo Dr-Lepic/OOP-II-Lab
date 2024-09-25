@@ -1,8 +1,10 @@
 ## OOP II Lab 
 
-**A Repository to Store Lab Tasks Of OOP II**
+**A Repository for Storing OOP II Lab Tasks by**
 
-**IUT SWE'22**
+**Mahbub '48**  
+**IUT SWE ’22**
+
 
 ---
-##  
+
