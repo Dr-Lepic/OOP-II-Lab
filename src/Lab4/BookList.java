@@ -8,12 +8,12 @@ import java.util.Comparator;
 
 public class BookList {
     private ArrayList<Book> books;
-    public BookList(String path, BookCollector collector) {
+    public BookList(String path, BookCollector collector) throws IOException {
         books = new ArrayList<>();
         setBooks(path, collector);
     }
 
-    public void setBooks(String path, BookCollector collector) {
+    public void setBooks(String path, BookCollector collector) throws IOException {
         books = new ArrayList<>();
         books = collector.collect(path);
     }

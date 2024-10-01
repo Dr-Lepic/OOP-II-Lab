@@ -1,0 +1,16 @@
+<books>
+    <book>
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <genre>Classic</genre>
+        <pages>180</pages>
+        <dateFinished>2023-01-05</dateFinished>
+    </book>
+    <book>
+        <title>Atomic Habits</title>
+        <author>James Clear</author>
+        <genre>Self-Help</genre>
+        <pages>320</pages>
+        <dateFinished>2023-02-14</dateFinished>
+    </book>
+</books>

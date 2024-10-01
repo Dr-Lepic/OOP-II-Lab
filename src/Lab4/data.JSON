@@ -1,0 +1,17 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "pages": 180,
+    "dateFinished": "2023-01-05"
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "genre": "Self-Help",
+    "pages": 320,
+    "dateFinished": "2023-02-14"
+  }
+
+]
