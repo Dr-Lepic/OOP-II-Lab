@@ -8,23 +8,14 @@ import java.util.Comparator;
 
 public class BookList {
     private ArrayList<Book> books;
-    public BookList(String path) {
+    public BookList(String path, BookCollector collector) {
         books = new ArrayList<>();
-        setBooks(path);
+        setBooks(path, collector);
     }
 
-    public void setBooks(String path){
-        try{
-            BufferedReader br = new BufferedReader(new FileReader(path));
-            String line;
-            while((line = br.readLine()) != null){
-                String[] data = line.split(",");
-                Book tempBook = new Book(data[0], data[1], data[2], Integer.parseInt(data[3]), new Date(data[4]));
-                books.add(tempBook);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public void setBooks(String path, BookCollector collector) {
+        books = new ArrayList<>();
+        books = collector.collect(path);
     }
 
     public void getBooks() {
