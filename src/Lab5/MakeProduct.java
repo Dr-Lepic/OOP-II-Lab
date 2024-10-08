@@ -6,6 +6,9 @@ public class MakeProduct {
     ArrayList<Product> createdProducts;
     public MakeProduct() {
         createdProducts = new ArrayList<>();
+        generateProducts();
+
+
     }
 
     void generateProducts() {
@@ -14,9 +17,13 @@ public class MakeProduct {
         createdProducts.add(new Electronics("Keyboard", 50, 2.00));
         createdProducts.add(new Clothing("T-shirt", 10, 1.00));
         createdProducts.add(new Clothing("T-shirt-2", 20, 1.00));
-        createdProducts.add(new Clothing("T-shirt-3", 10, 2.00));
+        createdProducts.add(new Clothing("T-shirt-2", 10, 1.00));
         createdProducts.add(new Furniture("Table", 20, 200.00));
         createdProducts.add(new Furniture("Chair", 10, 140.00));
         createdProducts.add(new Furniture("Chair-2", 20, 130.00));
+    }
+
+    ArrayList<Product> getCreatedProducts() {
+        return createdProducts;
     }
 }
