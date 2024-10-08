@@ -7,6 +7,9 @@ public abstract class Product {
     double totalPrice;
 
     public Product(String name, int stock, double unitPrice) {
+        if (stock<0 || unitPrice<0){
+            throw new IllegalArgumentException("Stock or Unit Price cannot be less than zero");
+        }
         this.name = name;
         this.stock = stock;
         this.unitPrice = unitPrice;
@@ -15,4 +18,19 @@ public abstract class Product {
 
     abstract double calculateTotalPrice();
 
+    public String getName() {
+        return name;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
 }
