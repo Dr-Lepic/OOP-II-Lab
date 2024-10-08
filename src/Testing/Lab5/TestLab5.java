@@ -3,6 +3,7 @@ package Testing.Lab5;
 import Lab5.Clothing;
 import Lab5.Electronics;
 import Lab5.Furniture;
+import Lab5.MakeProduct;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
@@ -49,5 +50,13 @@ public class TestLab5 {
         Clothing test = new Clothing("Shirt", 20, 100.00);
         assertEquals(110, test.getTotalPrice());
     }
+
+    @Test
+    public void test_productCreation(){
+        MakeProduct test = new MakeProduct();
+        assertEquals(9, test.productCount());
+    }
+
+
 
 }
