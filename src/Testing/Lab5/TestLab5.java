@@ -38,4 +38,16 @@ public class TestLab5 {
         assertEquals(216, test.getTotalPrice());
     }
 
+    @Test
+    public void test_electronic_total(){
+        Electronics test = new Electronics("Mouse", 20, 100.00);
+        assertEquals(115, test.getTotalPrice());
+    }
+
+    @Test
+    public void test_furniture_total(){
+        Clothing test = new Clothing("Shirt", 20, 100.00);
+        assertEquals(110, test.getTotalPrice());
+    }
+
 }
