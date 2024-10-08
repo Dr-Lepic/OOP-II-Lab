@@ -1,7 +1,7 @@
 package Lab5;
 
 public class Clothing extends Product{
-    public Clothing(String name, double price, int quantity) {
+    public Clothing(String name, int quantity, double price) {
         super(name, quantity, price);
     }
 
