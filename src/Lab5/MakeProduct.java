@@ -7,8 +7,6 @@ public class MakeProduct {
     public MakeProduct() {
         createdProducts = new ArrayList<>();
         generateProducts();
-
-
     }
 
     void generateProducts() {
@@ -23,7 +21,11 @@ public class MakeProduct {
         createdProducts.add(new Furniture("Chair-2", 20, 130.00));
     }
 
-    ArrayList<Product> getCreatedProducts() {
+    public int productCount(){
+        return createdProducts.size();
+    }
+
+    public ArrayList<Product> getCreatedProducts() {
         return createdProducts;
     }
 }
