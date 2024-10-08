@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class OrderManager {
-    ArrayList<Product>products;
+    public ArrayList<Product>products;
     public OrderManager(ArrayList<Product> products) {
         this.products = products;
         products.sort(Comparator.comparing(Product::getTotalPrice).thenComparing(Product::getName).thenComparing(Product::getStock));

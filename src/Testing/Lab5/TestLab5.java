@@ -1,10 +1,10 @@
 package Testing.Lab5;
 
-import Lab5.Clothing;
-import Lab5.Electronics;
-import Lab5.Furniture;
-import Lab5.MakeProduct;
+import Lab5.*;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 
@@ -71,6 +71,15 @@ public class TestLab5 {
         assertEquals(20, test.getStock());
     }
 
+    @Test
+    public void test_sort(){
+        ArrayList<Product> test = new ArrayList<>();
+        test.add( new Clothing("T-shirt-2", 20, 1.00));
+        test.add( new Clothing("T-shirt-2", 10, 1.00));
+        test.add( new Clothing("T-shirt", 10, 1.00));
+        OrderManager orderManager = new OrderManager(test);
+        assertEquals("T-shirt", orderManager.products.getFirst().getName());
+    }
 
 
 
