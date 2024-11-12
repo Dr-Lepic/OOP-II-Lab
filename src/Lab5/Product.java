@@ -33,7 +33,6 @@ public abstract class Product {
     public double getTotalPrice() {
         return totalPrice;
     }
-
     @Override
     public String toString() {
         return "name='" + name + '\'' +
