@@ -53,6 +53,7 @@ public class UserManagementSystem {
     }
 
     public User authenticateUser(String username, String password){
+       // need to downcast in the main to use the functions of each child class
         User user = users.get(username);
         if(user != null && user.password.equals(password)){
             System.out.println("User " + user.name + " authenticated");

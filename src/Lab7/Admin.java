@@ -27,6 +27,9 @@ public class Admin extends User {
         return reader.read();
     }
 
+    public StringBuilder readAdmin() throws FileNotFoundException {
+        return adminPrivileges.readAdmin();
+    }
     public void modify(String oldWord, String newWord){
         IModifier modifier = new ModifierCSV();
         modifier.modify(oldWord, newWord);

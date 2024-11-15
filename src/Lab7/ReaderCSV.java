@@ -10,6 +10,7 @@ public class ReaderCSV implements IReader{
     public StringBuilder read() throws FileNotFoundException {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("src/Lab7/User.csv"));
+
             String line;
             StringBuilder sb = new StringBuilder();
             while((line = reader.readLine()) != null){

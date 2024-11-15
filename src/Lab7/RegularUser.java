@@ -2,7 +2,7 @@ package Lab7;
 
 import java.io.*;
 
-public class RegularUser  extends User implements Iuser, IReader{
+public class RegularUser  extends User implements Iuser{
     public RegularUser(String id, String name, String email, String password) {
         super( id, name, email, password, "Regular");
     }
@@ -18,7 +18,6 @@ public class RegularUser  extends User implements Iuser, IReader{
         System.out.println(this);
     }
 
-    @Override
     public StringBuilder read() throws FileNotFoundException {
         IReader reader = new ReaderCSV();
         return reader.read();

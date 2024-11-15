@@ -49,9 +49,18 @@ public class TestLab7 {
     public void test_Admin_addUser() throws FileNotFoundException {
         Admin admin = new Admin("1", "Mahbub", "test@gmail.com", "123");
         admin.addUser("2", "Mahbub90", "test@gmail.com", "123", "Power");
-        ReaderCSV reader = new ReaderCSV();
+        //ReaderCSV reader = new ReaderCSV();
         assertEquals("1,Mahbub2,test@gmail.com,123,Power\n" +
-               "2,Mahbub90,test@gmail.com,123,Power\n" , reader.read().toString());
+               "2,Mahbub90,test@gmail.com,123,Power\n" , admin.readUser().toString());
 
     }
+
+    @Test
+    public void test_Admin_addAdmin() throws FileNotFoundException {
+        Admin admin = new Admin("1", "Mahbub", "test@gmail.com", "123");
+        admin.addAdmin("2", "Mahbub90", "test@gmail.com", "123");
+        assertEquals("2,Mahbub90,test@gmail.com,123\n", admin.readAdmin().toString());
+    }
+
+
 }
