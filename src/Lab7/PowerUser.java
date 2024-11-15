@@ -3,17 +3,17 @@ package Lab7;
 import java.io.FileNotFoundException;
 
 public class PowerUser extends User{
-    public PowerUser(String name, String email, String password, String id) {
-        super(name, email, password, id, "Power");
+    public PowerUser( String id, String name, String email, String password) {
+        super(id, name, email, password, "Power");
     }
 
-    void read() throws FileNotFoundException {
-        Reader reader = new Reader();
-        reader.read();
+    public StringBuilder read() throws FileNotFoundException {
+        IReader reader = new ReaderCSV();
+        return reader.read();
     }
 
-    void modify(String oldWord, String newWord) throws FileNotFoundException {
-        Modifier modifier = new Modifier();
+    public void modify(String oldWord, String newWord) throws FileNotFoundException {
+        IModifier modifier = new ModifierCSV();
         modifier.modify(oldWord, newWord);
     }
 }

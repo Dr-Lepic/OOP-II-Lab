@@ -3,9 +3,10 @@ package Lab7;
 import java.io.*;
 
 public class RegularUser  extends User implements Iuser, IReader{
-    public RegularUser(String name, String email, String password, String id) {
-        super(name, email, password, id, "Regular");
+    public RegularUser(String id, String name, String email, String password) {
+        super( id, name, email, password, "Regular");
     }
+
 
 
     public void do_something(){
@@ -18,9 +19,9 @@ public class RegularUser  extends User implements Iuser, IReader{
     }
 
     @Override
-    public void read() throws FileNotFoundException {
-        Reader reader = new Reader();
-        reader.read();
+    public StringBuilder read() throws FileNotFoundException {
+        IReader reader = new ReaderCSV();
+        return reader.read();
     }
 
     @Override

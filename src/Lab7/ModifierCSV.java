@@ -2,10 +2,10 @@ package Lab7;
 
 import java.io.*;
 
-public class Modifier implements IModifier{
+public class ModifierCSV implements IModifier{
     @Override
     public void modify(String oldWord, String newWord) {
-        File file = new File("Lab7/User.csv");
+        File file = new File("src/Lab7/User.csv");
         StringBuilder Old = new StringBuilder();
         BufferedReader br = null;
         FileWriter fw = null;
