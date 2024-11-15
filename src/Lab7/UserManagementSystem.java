@@ -32,6 +32,7 @@ public class UserManagementSystem {
                 User user = factory.createUser(line);
                 users.put(user.name, user);
             }
+            reader.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -47,6 +48,7 @@ public class UserManagementSystem {
                 Admin admin = new Admin(parts[0], parts[1], parts[2], parts[3]);
                 admins.put(admin.name, admin);
             }
+            reader.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -106,6 +106,7 @@ public class AdminPrivilegesCSV implements IAdminPrivileges{
             while((line = reader.readLine()) != null){
                 sb.append(line).append("\n");
             }
+            reader.close();
             return sb;
         } catch (IOException e) {
             throw new RuntimeException(e);

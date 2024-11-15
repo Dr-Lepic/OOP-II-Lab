@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestLab7 {
 
@@ -68,6 +67,21 @@ public class TestLab7 {
     public void test_Admin_renameFile() throws FileNotFoundException {
         Admin admin = new Admin("1", "Mahbub", "test@gmail.com", "123");
         assertTrue(admin.renameFile("src/Lab7/User.csv", "user.csv"));
+    }
+
+    @Test
+    public void test_Authentication_user() throws FileNotFoundException {
+        UserManagementSystem auth = UserManagementSystem.getInstance();
+        User user = auth.authenticateUser("Mahbub2", "123");
+        assertInstanceOf(PowerUser.class, user);
+
+    }
+
+    @Test
+    public void test_Authentication_admin() throws FileNotFoundException {
+        UserManagementSystem auth = UserManagementSystem.getInstance();
+        Admin admin = auth.authenticateAdmin("Mahbub90", "123");
+        assertNull(admin);// cause file is empty
     }
 
 
