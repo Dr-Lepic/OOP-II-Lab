@@ -7,12 +7,6 @@ public class RegularUser  extends User{
         super( id, name, email, password, "Regular");
     }
 
-
-
-    public void do_something(){
-        System.out.println("Do something");
-    }
-
     public StringBuilder read() throws FileNotFoundException {
         IReader reader = new ReaderCSV();
         return reader.read();
