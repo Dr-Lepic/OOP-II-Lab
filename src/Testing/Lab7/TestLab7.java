@@ -7,6 +7,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class TestLab7 {
 
     @Test
@@ -60,6 +62,12 @@ public class TestLab7 {
         Admin admin = new Admin("1", "Mahbub", "test@gmail.com", "123");
         admin.addAdmin("2", "Mahbub90", "test@gmail.com", "123");
         assertEquals("2,Mahbub90,test@gmail.com,123\n", admin.readAdmin().toString());
+    }
+
+    @Test
+    public void test_Admin_renameFile() throws FileNotFoundException {
+        Admin admin = new Admin("1", "Mahbub", "test@gmail.com", "123");
+        assertTrue(admin.renameFile("src/Lab7/User.csv", "user.csv"));
     }
 
 

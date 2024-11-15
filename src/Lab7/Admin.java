@@ -30,9 +30,15 @@ public class Admin extends User {
     public StringBuilder readAdmin() throws FileNotFoundException {
         return adminPrivileges.readAdmin();
     }
+
     public void modify(String oldWord, String newWord){
         IModifier modifier = new ModifierCSV();
         modifier.modify(oldWord, newWord);
+    }
+
+    public boolean renameFile(String path, String newName){
+        return adminPrivileges.changeFileName(path, newName);
+
     }
 
 

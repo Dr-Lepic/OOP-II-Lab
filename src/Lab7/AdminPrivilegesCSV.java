@@ -113,23 +113,19 @@ public class AdminPrivilegesCSV implements IAdminPrivileges{
     }
 
     @Override
-    public void changeFileName(String path, String newName) {
+    public boolean changeFileName(String path, String newName) {
         File file = new File(path);
         String[] temp = path.split("/");
         temp[temp.length - 1] = newName;
         StringBuilder newPath = new StringBuilder();
-        for(int i = 0; i < temp.length - 1; i++){
+        for(int i = 0; i < temp.length; i++){
             newPath.append(temp[i]);
+            if(i + 1 != temp.length){
+                newPath.append("/");
+            }
         }
         File newFile = new File(newPath.toString());
-        boolean flag = file.renameTo(newFile);
-        if(flag){
-            System.out.println("File renamed");
-        }
-        else {
-            System.out.println("File not renamed");
-        }
-
+        return file.renameTo(newFile);
     }
 
 
