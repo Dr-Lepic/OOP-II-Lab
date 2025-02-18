@@ -13,10 +13,10 @@ public class CSVInvoice extends Invoice{
     public void generateInvoice() {
         StringBuilder builder = new StringBuilder();
         builder.append("Ingredients, Amount, Price").append(System.lineSeparator());
-        for(Flavour fl: order.flavours){
+        for(Item fl: order.flavours){
             builder.append(fl.getName()).append(",").append(fl.getCount()).append(",").append(fl.getPrice()).append(System.lineSeparator());
         }
-        for(Toppings tp: order.toppings){
+        for(Item tp: order.toppings){
             builder.append(tp.getName()).append(",").append(tp.getCount()).append(",").append(tp.getPrice()).append(System.lineSeparator());
         }
 

@@ -3,8 +3,8 @@ package Lab9;
 import java.util.ArrayList;
 
 public class Order {
-    ArrayList<Flavour> flavours;
-    ArrayList<Toppings> toppings;
+    ArrayList<Item> flavours;
+    ArrayList<Item> toppings;
     ServeType serveType;
     double amount;
     double tax;
@@ -30,10 +30,10 @@ public class Order {
     }
     void calculateAmount() {
         // if(amount > 0){return;}
-        for (Flavour flavour : flavours) {
+        for (Item flavour : flavours) {
             amount += flavour.getCost();
         }
-        for (Toppings topping : toppings) {
+        for (Item topping : toppings) {
             amount += topping.getCost();
         }
         amount += serveType.getCost();
@@ -56,6 +56,11 @@ public class Order {
         calculateAmount();
         calculateTax();
         totalPrice = amount + tax;
+    }
+
+    public void checkOut(){
+        InvoiceFactory invoiceFactory = new InvoiceFactory();
+        invoiceFactory.getInvoice(this);
     }
 
 
