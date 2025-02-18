@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Order {
     ArrayList<Item> flavours;
     ArrayList<Item> toppings;
-    ServeType serveType;
+    Item serveType;
     double amount;
     double tax;
     double totalPrice;

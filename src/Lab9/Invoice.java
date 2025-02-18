@@ -1,9 +1,5 @@
 package Lab9;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-
 public abstract class Invoice {
     Order order;
 

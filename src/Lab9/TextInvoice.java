@@ -14,15 +14,15 @@ public class TextInvoice extends Invoice{
         StringBuilder builder = new StringBuilder();
         builder.append("Ice Cream Shop Invoice").append(System.lineSeparator());
         for(Item fl: order.flavours){
-            builder.append(fl.getName()).append(" - ").append(fl.getCount()).append(" Scoop: $").append(fl.getPrice()).append(System.lineSeparator());
+            builder.append(fl.getName()).append(" - ").append(fl.getCount()).append(" Scoop: $").append(String.format("%.2f", fl.getPrice())).append(System.lineSeparator());
         }
         for(Item tp: order.toppings){
-            builder.append(tp.getName()).append(" - ").append(tp.getCount()).append(" Times: $").append(tp.getPrice()).append(System.lineSeparator());
+            builder.append(tp.getName()).append(" - ").append(tp.getCount()).append(" Times: $").append(String.format("%.2f", tp.getPrice())).append(System.lineSeparator());
         }
 
-        builder.append("SubTotal: $").append(order.amount).append(System.lineSeparator());
-        builder.append("Tax : $").append(order.tax).append(System.lineSeparator());
-        builder.append("Total Amount due: $").append(order.totalPrice).append(System.lineSeparator());
+        builder.append("SubTotal: $").append(String.format("%.2f", order.amount)).append(System.lineSeparator());
+        builder.append("Tax : $").append(String.format("%.2f", order.tax)).append(System.lineSeparator());
+        builder.append("Total Amount due: $").append(String.format("%.2f", order.totalPrice)).append(System.lineSeparator());
 
 
         try{

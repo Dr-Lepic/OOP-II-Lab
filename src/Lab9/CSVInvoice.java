@@ -14,15 +14,15 @@ public class CSVInvoice extends Invoice{
         StringBuilder builder = new StringBuilder();
         builder.append("Ingredients, Amount, Price").append(System.lineSeparator());
         for(Item fl: order.flavours){
-            builder.append(fl.getName()).append(",").append(fl.getCount()).append(",").append(fl.getPrice()).append(System.lineSeparator());
+            builder.append(fl.getName()).append(",").append(fl.getCount()).append(",").append(String.format("%.2f", fl.getPrice())).append(System.lineSeparator());
         }
         for(Item tp: order.toppings){
-            builder.append(tp.getName()).append(",").append(tp.getCount()).append(",").append(tp.getPrice()).append(System.lineSeparator());
+            builder.append(tp.getName()).append(",").append(tp.getCount()).append(",").append(String.format("%.2f", tp.getPrice())).append(System.lineSeparator());
         }
 
-        builder.append("SubTotal,").append("-,").append(order.amount).append(System.lineSeparator());
-        builder.append("Tax,").append("-,").append(order.tax).append(System.lineSeparator());
-        builder.append("Total Amount due,").append("-,").append(order.totalPrice).append(System.lineSeparator());
+        builder.append("SubTotal,").append("-,").append(String.format("%.2f",order.amount)).append(System.lineSeparator());
+        builder.append("Tax,").append("-,").append(String.format("%.2f",order.tax)).append(System.lineSeparator());
+        builder.append("Total Amount due,").append("-,").append(String.format("%.2f",order.totalPrice)).append(System.lineSeparator());
 
 
         try{
