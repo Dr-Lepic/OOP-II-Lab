@@ -6,22 +6,22 @@ public class Toppings extends Item{
     }
 
     @Override
-    int getCount() {
+    public int getCount() {
         return count;
     }
 
     @Override
-    double getPrice() {
+    public double getPrice() {
         return price;
     }
 
     @Override
-    String getName() {
+    public String getName() {
         return name;
     }
 
     @Override
-    double getCost() {
+    public double getCost() {
         return count * price;
     }
 }
