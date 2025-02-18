@@ -21,11 +21,9 @@ public class Order {
 
     public void addFlavour(Flavour flavour) {
         flavours.add(flavour);
-        calculate();
     }
     public void addTopping(Toppings topping) {
         toppings.add(topping);
-        calculate();
     }
     public void setServeType(ServeType serveType) {
         this.serveType = serveType;
@@ -54,8 +52,7 @@ public class Order {
         return amount;
     }
 
-    void calculate(){
-        amount = 0;
+    public void calculate(){
         calculateAmount();
         calculateTax();
         totalPrice = amount + tax;

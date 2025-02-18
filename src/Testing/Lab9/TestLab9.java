@@ -31,4 +31,21 @@ public class TestLab9 {
         assertEquals(9.60, order.getAmount());
         assertEquals(0.768, order.getTax());
     }
+
+    @Test
+    public void test_Order_Glass(){
+        Order order = new Order();
+        order.setServeType(new GlassJar(1));
+        order.addFlavour(new ChocolateFudge(3));
+        order.addTopping(new Sprinkles(2));
+//        order.calculate();
+
+//        TextInvoice invoice = new TextInvoice(order);
+//        invoice.generateInvoice();
+        CSVInvoice invoice = new CSVInvoice(order);
+        invoice.generateInvoice();
+
+        assertEquals(14.60, order.getAmount());
+        assertEquals(1.168, order.getTax());
+    }
 }
