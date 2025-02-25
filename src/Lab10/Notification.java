@@ -1,7 +1,7 @@
 package Lab10;
 
 public class Notification implements INotification {
-    private Boolean activate;
+    private Boolean activateStatus;
 
     @Override
     public void sendNotification(String message) {
@@ -10,9 +10,9 @@ public class Notification implements INotification {
     }
 
     public void activate(){
-        this.activate = true;
+        this.activateStatus = true;
     }
     public void deactivate(){
-        this.activate = false;
+        this.activateStatus = false;
     }
 }

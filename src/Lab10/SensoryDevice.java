@@ -26,7 +26,7 @@ public class SensoryDevice extends Device{
     }
     public void setSensitivity(int sensitivity){
         if(sensitivity < 1 || sensitivity > 10){
-            System.out.println("Sensitivity must be between 1 and 10");
+            notification.sendNotification("Sensitivity must be between 1 and 10");
         }
         else {
             this.sensitivity = sensitivity;

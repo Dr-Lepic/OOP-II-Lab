@@ -34,6 +34,16 @@ public class ControlCenter {
         sensoryDevices.add(sensoryDevice);
     }
 
+    public void removePoweredDevice(int index){
+        poweredDevices.remove(index);
+    }
+    public void removeSecurityDevice(int index){
+        securityDevices.remove(index);
+    }
+    public void removeSensoryDevice(int index){
+        sensoryDevices.remove(index);
+    }
+
     public void getNotifications(){
         for(String n : notifications) {
             System.out.println(n);

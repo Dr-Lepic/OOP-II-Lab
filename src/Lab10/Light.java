@@ -8,7 +8,7 @@ public class Light extends PoweredDevice{
     public Light(String location){
         super(location);
         color = "White";
-        int brightness = 100;
+        brightness = 100;
         ConsumingPower = 100;
     }
 
