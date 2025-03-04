@@ -1,3 +1,5 @@
+package Lab11;
+
 public interface UserBookBuyHistory {
     public static String TABLE_BOOK_BUYING_HISTORY = "buying_history";
 	

@@ -1,3 +1,4 @@
+package Lab11;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +14,8 @@ public class DBUtil {
 
             Class.forName(DatabaseConfig.DRIVER_NAME);
 
-            connection = DriverManager.getConnection(DatabaseConfig.CONNECTION_STRING, DatabaseConfig.DB_USER_NAME,
+            connection = DriverManager.getConnection(DatabaseConfig.CONNECTION_STRING,
+                    DatabaseConfig.DB_USER_NAME,
                     DatabaseConfig.DB_PASSWORD);
         } catch (SQLException | ClassNotFoundException e) {
 
