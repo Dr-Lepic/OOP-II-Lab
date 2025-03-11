@@ -1,7 +1,7 @@
 package Lab12;
 
-public abstract class Block {
-    private char[][] shape;
+public class Block {
+    protected char[][] shape;
 
     public void rotate(){
         int rows = shape.length;
